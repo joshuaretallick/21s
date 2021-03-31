@@ -9,4 +9,23 @@ def blackjack
     cards = ["Ace", "2", "3", "4", "5", "6", "7",
           "8", "9", "10", "Jack", "Queen", "King"]
 
+    sam_total = 0
+    dealer_total = 0
+
+    sam_hand = []
+    dealer_hand = []
+
+    2.times { sam_hand << cards.sample }
+    2.times { dealer_hand << cards.sample }
+
+    sam_hand.each do |score|
+      sam_total += card_values[score]
+    end
+    puts "Sams Hand: #{sam_hand}, Sams Total: #{sam_total}"
+
+    dealer_hand.each do |score|
+      dealer_total += card_values[score]
+    end
+    puts "Dealers Hand: #{dealer_hand}, Dealers Total: #{dealer_total}"
+
 end
