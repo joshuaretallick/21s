@@ -18,3 +18,17 @@ Can Sam beat the Dealer at Blackjack (21s)?
 * Determine which player wins the game
 
 [1] Numbered cards score their point value. Jack, Queen and King score 10 and Ace scores 11.
+
+
+Plan:
+* Build a deck of cards (hash?), probably no need to consider suit
+* Create two players, player_one_sam & player_two_dealer
+* Randomize there hand with two 'cards' at start of game
+
+* Add up score of each hand, sam_score & dealer_score
+* If either score adds up to 21 then the game wins or draws
+* If not then deal ONE more random cards
+* Stop dealing if score >= 17
+* If sam_total > 21 then Sam loses
+* Now dealer can start receiving cards
+* Same deal as above
