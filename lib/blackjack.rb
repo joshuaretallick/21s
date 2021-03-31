@@ -28,4 +28,15 @@ def blackjack
     end
     puts "Dealers Hand: #{dealer_hand}, Dealers Total: #{dealer_total}"
 
+    if sam_total == 21 && dealer_total == 21
+      puts "Its a draw!"
+    elsif sam_total == 21
+      puts "Sam got Blackjack!"
+    elsif dealer_total == 21
+      puts "You lose! Dealer got Blackjack!"
+    else
+      sam_hand << cards.sample
+      puts "Sams Hand: #{sam_hand}, Sams Total: #{sam_total}"
+    end
+
 end
