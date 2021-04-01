@@ -23,4 +23,9 @@ describe Card do
     expect(card.value).to eq 4
   end
 
+  it "should return 11 for Ace" do
+    card = Card.new(:diamonds, "A")
+    expect(card.value).to eq 11
+  end
+
 end

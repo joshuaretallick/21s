@@ -9,6 +9,7 @@ class Card
 
   def value
     return 10 if ["J", "Q", "K"].include? @value
+    return 11 if @value == "A"
     return @value
   end
 
