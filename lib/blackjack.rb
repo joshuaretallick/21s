@@ -1,13 +1,10 @@
 class Card
 
-  attr_reader :suit
+  attr_reader :suit, :value
 
-  def initialize
-    @suit = :clubs
-  end
-
-  def suit
-    @suit
+  def initialize(suit, value)
+    @suit = suit
+    @value = value
   end
 
 end
