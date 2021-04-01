@@ -62,3 +62,8 @@ describe Game do
   end
 
 end
+
+describe Hand do
+
+
+end
