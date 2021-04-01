@@ -43,4 +43,22 @@ describe Deck do
     expect(Deck.build_cards.length).to eq 52
   end
 
+  it "should have 52 cards when a new deck" do
+    expect(Deck.new.cards.length).to eq 52
+  end
+
+end
+
+describe Game do
+
+  it "should have a players hand" do
+    expect(Game.new.player_hand.cards.length).to eq 2
+  end
+  it "should have a dealers hand" do
+    expect(Game.new.dealer_hand.cards.length).to eq 2
+  end
+  it "should have a status" do
+    expect(Game.new.status).not_to eq nil
+  end
+
 end
