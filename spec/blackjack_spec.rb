@@ -28,4 +28,19 @@ describe Card do
     expect(card.value).to eq 11
   end
 
+  it "should be formatted nicely" do
+    card = Card.new(:diamonds, "A")
+    expect(card.to_s).to eq "A-diamonds"
+  end
+
+end
+
+describe Deck do
+
+  subject(:deck) { described_class.new }
+
+  it "should build 52 cards" do
+    expect(Deck.build_cards.length).to eq 52
+  end
+
 end
